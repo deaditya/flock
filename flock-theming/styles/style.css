@@ -1,0 +1,223 @@
+/* Delete this */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.wrap {
+  margin: 0 auto;
+  width: 800px;
+  text-align: center;
+}
+
+/*-------------*/
+/* Global color styles */
+/* Typography styles */
+h1 {
+  font-size: 56px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0.2px;
+  color: #52575C;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: 0.2px;
+  color: #52575C;
+}
+
+h3 {
+  font-size: 28px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.2px;
+  color: #52575C;
+}
+
+h4 {
+  font-size: 26px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0.2px;
+  color: #52575C;
+}
+
+h5 {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  color: #52575C;
+}
+
+h6 {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #52575C;
+}
+
+.subtitle1 {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #52575C;
+}
+
+.subtitle2 {
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #52575C;
+}
+
+.body1 {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #52575C;
+}
+
+.body2 {
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #52575C;
+}
+
+.small1 {
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #52575C;
+}
+
+.small2 {
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #52575C;
+}
+
+.small3 {
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  color: #52575C;
+}
+
+.inisial {
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  line-height: 16px;
+  letter-spacing: 1px;
+  color: #52575C;
+}
+
+/* button solid */
+.btn-solid {
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.btn-default {
+  display: inline-block;
+  background: #D03A43;
+  border: 2px solid #D03A43;
+}
+
+.btn-default:hover {
+  background: #b62b34;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  border-color: #b62b34;
+}
+
+.btn-default:active {
+  background: #701b20;
+  border: 2px solid;
+  border-color: #701b20;
+}
+
+.btn-dark {
+  display: inline-block;
+  background: #52575C;
+  border: 2px solid #52575C;
+}
+
+.btn-dark:hover {
+  background: #3f4346;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  border-color: #3f4346;
+}
+
+.btn-dark:active {
+  background: #161719;
+  border: 2px solid;
+  border-color: #161719;
+}
+
+/* button line */
+.btn-line {
+  color: #52575C;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.btn-2 {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #52575C;
+}
+
+.btn-2:hover {
+  background: #b62b34;
+  color: white;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border: 2px solid;
+  border-color: #b62b34;
+}
+
+.btn-2:active {
+  background: #701b20;
+  border-color: #701b20;
+}
+/*# sourceMappingURL=style.css.map */

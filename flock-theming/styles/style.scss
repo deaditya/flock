@@ -1,0 +1,222 @@
+/* Delete this */
+.wrap {
+    margin:0 auto;
+    width:800px;
+    text-align:center;
+  }
+/*-------------*/
+
+/* Global color styles */
+$flock-red: #E7404A;
+$gray-dark: #52575C;
+$gray: #A0A4A8;
+$gray-light: #CACCCF;
+$divider-color: #E8E8E8;
+$bg-color: #F6F8FB;
+$flock-red-dark: #D03A43;
+$flock-red-hover: #E9535C;
+$flock-red-light: #EC666E;
+$flock-red-lightest: #EE7980;
+
+/* Typography styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$global-font:'Lato', sans-serif;
+
+h1{
+    font-size:56px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0.2px;
+    color: $gray-dark;
+}
+
+h2{
+    font-size:40px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0.2px;
+    color: $gray-dark;
+}
+
+h3{
+    font-size:28px ;
+    font-family: $global-font;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0.2px;
+    color: $gray-dark;
+}
+
+h4{
+    font-size:26px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0.2px;
+    color: $gray-dark;
+}
+
+h5{
+    font-size:20px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    color: $gray-dark;
+}
+
+h6{
+    font-size:18px ;
+    font-family: $global-font;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: $gray-dark;
+}
+
+.subtitle1{
+    font-size:16px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: $gray-dark;
+}
+
+.subtitle2{
+    font-size:14px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: $gray-dark;
+}
+
+.body1{
+    font-size:16px ;
+    font-family: $global-font;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: $gray-dark;
+}
+
+.body2{
+    font-size:14px ;
+    font-family: $global-font;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: $gray-dark;
+}
+
+.small1{
+    font-size:13px ;
+    font-family: $global-font;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: $gray-dark;
+}
+
+.small2{
+    font-size:12px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: $gray-dark;
+}
+
+.small3{
+    font-size:10px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0.2px;
+    color: $gray-dark;
+}
+
+.inisial{
+    font-size:13px ;
+    font-family: $global-font;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 1px;
+    color: $gray-dark;
+}
+
+/* button solid */
+@mixin button-solid($bg) {
+    display: inline-block;
+    background: $bg;
+    border:2px solid $bg;
+    &:hover {
+      background:darken($bg,8%);
+      transition: all 0.3s ease;
+      border:2px solid;
+      border-color: darken($bg,8%);
+    }
+    &:active {
+      background:darken($bg,25%);
+      border:2px solid;
+      border-color: darken($bg,25%);
+    } 
+  }
+
+.btn-solid {
+    color:white;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:6px;
+    font-size:14px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+
+.btn-default {
+    @include button-solid($flock-red-dark);
+ }
+
+.btn-dark {
+    @include button-solid($gray-dark);
+ }
+
+/* button line */
+@mixin button-line($bg) {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid $gray-dark;
+    &:hover {
+        background:darken($bg,8%);
+        color:white;
+        transition: all 0.4s ease;
+        border:2px solid;
+        border-color: darken($bg,8%);
+    }
+    &:active {
+        background:darken($bg,25%);
+        border-color: darken($bg,25%);
+    } 
+  }
+
+.btn-line {
+    color:$gray-dark;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:6px;
+    font-size:14px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+
+.btn-2 {
+    @include button-line($flock-red-dark);
+}
