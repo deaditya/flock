@@ -1,14 +1,21 @@
-/* Delete this */
-.wrap {
-    margin:0 auto;
-    width:800px;
-    text-align:center;
-  }
-/*-------------*/
+/* for viewing on html only do not include in final css */
+.container {  
+    display: grid;  
+    grid-template-columns: 1000px;  
+    grid-template-rows: auto;
+    padding: 3%;
+}
+.container2 {
+    display:inline-block;
+    padding:3%;
+    background-color: #c5bac5;
+}
+/*-----------------------------------------------------------*/
 
 /* Global color styles */
 $flock-red: #E7404A;
 $gray-dark: #52575C;
+$flock-white: white;
 $gray: #A0A4A8;
 $gray-light: #CACCCF;
 $divider-color: #E8E8E8;
@@ -17,6 +24,9 @@ $flock-red-dark: #D03A43;
 $flock-red-hover: #E9535C;
 $flock-red-light: #EC666E;
 $flock-red-lightest: #EE7980;
+
+/* Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /* Typography styles */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
@@ -29,7 +39,6 @@ h1{
     font-weight: 700;
     line-height: 70px;
     letter-spacing: 0.2px;
-    color: $gray-dark;
 }
 
 h2{
@@ -38,7 +47,6 @@ h2{
     font-weight: 700;
     line-height: 46px;
     letter-spacing: 0.2px;
-    color: $gray-dark;
 }
 
 h3{
@@ -47,7 +55,6 @@ h3{
     font-weight: 400;
     line-height: 34px;
     letter-spacing: 0.2px;
-    color: $gray-dark;
 }
 
 h4{
@@ -56,7 +63,6 @@ h4{
     font-weight: 700;
     line-height: 34px;
     letter-spacing: 0.2px;
-    color: $gray-dark;
 }
 
 h5{
@@ -65,7 +71,6 @@ h5{
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0.2px;
-    color: $gray-dark;
 }
 
 h6{
@@ -74,7 +79,14 @@ h6{
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.1px;
-    color: $gray-dark;
+}
+
+p{
+    font-size:16px ;
+    font-family: $global-font;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
 }
 
 .subtitle1{
@@ -83,7 +95,6 @@ h6{
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    color: $gray-dark;
 }
 
 .subtitle2{
@@ -92,7 +103,6 @@ h6{
     font-weight: 700;
     line-height: 20px;
     letter-spacing: 0.1px;
-    color: $gray-dark;
 }
 
 .body1{
@@ -101,7 +111,6 @@ h6{
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.1px;
-    color: $gray-dark;
 }
 
 .body2{
@@ -110,7 +119,6 @@ h6{
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.1px;
-    color: $gray-dark;
 }
 
 .small1{
@@ -119,7 +127,6 @@ h6{
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0.1px;
-    color: $gray-dark;
 }
 
 .small2{
@@ -128,7 +135,6 @@ h6{
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    color: $gray-dark;
 }
 
 .small3{
@@ -137,7 +143,6 @@ h6{
     font-weight: 700;
     line-height: 12px;
     letter-spacing: 0.2px;
-    color: $gray-dark;
 }
 
 .inisial{
@@ -146,7 +151,6 @@ h6{
     font-weight: 900;
     line-height: 16px;
     letter-spacing: 1px;
-    color: $gray-dark;
 }
 
 /* button solid */
@@ -179,11 +183,11 @@ h6{
     letter-spacing: 0.2px;
 }
 
-.btn-default {
+.btn-solid-red {
     @include button-solid($flock-red-dark);
  }
 
-.btn-dark {
+.btn-solid-dark {
     @include button-solid($gray-dark);
  }
 
@@ -217,6 +221,170 @@ h6{
     letter-spacing: 0.2px;
 }
 
-.btn-2 {
+.btn-line-red {
     @include button-line($flock-red-dark);
 }
+
+/* button fullwidth */
+.btn-solid-full {
+    width: 100%;
+    text-align: center;
+    color:white;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:6px;
+    font-size:14px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+
+.btn-line-full {
+    width:100%;
+    text-align: center;
+    color:$gray-dark;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:6px;
+    font-size:14px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+
+/* button icons */
+@mixin button-icon($bg) {
+    i {
+        width: 1em;
+        padding: 4px;
+    }
+    display: inline-block;
+    background: transparent;
+    border: 2px solid $gray-dark;
+    &:hover {
+        background:darken($bg,8%);
+        color:white;
+        transition: all 0.4s ease;
+        border-color: darken($bg,8%);
+    }
+    &:active {
+        background:darken($bg,25%);
+        border-color: darken($bg,25%);
+    } 
+  }
+
+.btn-icon-round{
+    text-align: center;
+    color:$gray-dark;
+    padding:4px 4px;
+    border-radius: 50%;
+    font-size:20px;
+}
+
+.btn-icon-red {
+    @include button-icon($flock-red-dark);
+}
+
+.btn-icon-square{
+    text-align: center;
+    color:$gray-dark;
+    padding:4px 4px;
+    border-radius: 6px;
+    font-size:20px;
+}
+
+.btn-icon-red {
+    @include button-icon($flock-red-dark);
+}
+
+@mixin button-icon-solid($bg) {
+    i {
+        width: 1em;
+        padding: 4px;
+        color:white;
+    }
+    display: inline-block;
+    background: $bg;
+    border: 2px solid $bg;
+    &:hover {
+        background:darken($bg,8%);
+        color:white;
+        transition: all 0.4s ease;
+        border-color: darken($bg,8%);
+    }
+    &:active {
+        background:darken($bg,25%);
+        border-color: darken($bg,25%);
+    } 
+  }
+
+.btn-icon-solid-red {
+    @include button-icon-solid($flock-red-dark);
+}
+.btn-icon-solid-dark {
+    @include button-icon-solid($gray-dark);
+}
+
+/* Color */
+/* font color */
+@mixin color-font($color){
+    color: $color;
+}
+/* font color b/w */
+.flock-color-white {
+   @include color-font($flock-white);
+}
+.flock-color-black {
+    @include color-font($gray-dark);
+}
+/* ---------- */
+
+/* for viewing on html only do not include in final css */
+@mixin color-theme($bg) {
+    text-align: center;
+    display: inline-block;
+    background: $bg;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:6px;
+    font-size:14px ;
+    font-family: $global-font;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+/* --------------- */
+/* for viewing on html only */
+.flock-red {
+    @include color-theme($flock-red);
+ }
+.gray-dark {
+    @include color-theme($gray-dark);
+ }
+.gray {
+    @include color-theme($gray);
+}
+.gray-light {
+    @include color-theme($gray-dark);
+}
+.divider-color {
+    @include color-theme($divider-color);
+}
+.bg-color {
+    @include color-theme($bg-color);
+}
+.flock-red-dark{
+    @include color-theme($flock-red-dark);
+}
+.flock-red-hover{
+    @include color-theme($flock-red-hover);
+}
+.flock-red-light{
+    @include color-theme($flock-red-light);
+}
+.flock-red-lightest{
+    @include color-theme($flock-red-lightest);
+}
+/*-----------------------------------------------------------*/
